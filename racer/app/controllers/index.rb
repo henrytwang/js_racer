@@ -15,8 +15,8 @@ end
 
 get '/results/:game_id' do 
   @game = Game.find(params[:game_id])
-  @winner = Gamer.where(:game_id => @game.id).order("completion_time DESC").last
-  @time = @winner.completion_time.strftime("%H")
+  @winner = Gamer.where(:game_id => @game.id).order("completion_time DESC").first
+  @time = @winner.completion_time
   erb :result
 end
 
