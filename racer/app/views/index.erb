@@ -1,0 +1,16 @@
+<% if @errors %>
+  <% @errors.each do |e| %>
+    <%= e.message %>
+  <% end %>
+<% end %>
+
+
+<form action="/players" method="post">
+
+<input type="text" name="first_player" placeholder="First Player Name">
+<input type="text" name="second_player" placeholder="Second Player Name">
+<input type="submit" value="Start Game">
+
+</form>
+
+

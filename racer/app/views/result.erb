@@ -1,0 +1,7 @@
+<h1> Results </h1>
+<% @game.players.each do |p| %>
+  <%= p.name %><br>
+<% end %>
+<p><%= @time %> Seconds</p>
+<br>
+<%= @winner.player %>
